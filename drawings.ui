@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DrawingsMainWindow</class>
+ <widget class="QMainWindow" name="DrawingsMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1183</width>
+    <height>742</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>江西晖能新材料图号对比系统——设计：袁伟明</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QFormLayout" name="formLayout">
+    <item row="1" column="0" colspan="2">
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">selection-color: rgb(255, 255, 255);
+selection-background-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::ExtendedSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="rowCount">
+       <number>0</number>
+      </property>
+      <property name="columnCount">
+       <number>14</number>
+      </property>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>料号</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>品名</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>规格</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>温度</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>密度</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>包装方式</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>内部图号</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>客户图号</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>物料描述</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>产品图纸</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>生产图纸</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>客户图纸</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>备注</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="addButton">
+        <property name="text">
+         <string>增加记录</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="addAllButton">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(0, 255, 127);</string>
+        </property>
+        <property name="text">
+         <string>批量增加</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="modifyButton">
+        <property name="text">
+         <string>修改记录</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deleteAllButton">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 170, 127);</string>
+        </property>
+        <property name="text">
+         <string>批量修改</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deleteButton">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>删除选中行</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="exportButton">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>导出到Excel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 170, 0);</string>
+        </property>
+        <property name="text">
+         <string>批量操作为调用Excel模板在后台操作，操作时不显示信息......</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="exitButton">
+        <property name="font">
+         <font>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>退   出</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" rowspan="2">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="8">
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>密度：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>客户图号：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="11">
+         <widget class="QLineEdit" name="PackagingMethod_lineEdit"/>
+        </item>
+        <item row="1" column="11">
+         <widget class="QLineEdit" name="Description_lineEdit"/>
+        </item>
+        <item row="1" column="10">
+         <widget class="QLabel" name="label_12">
+          <property name="text">
+           <string>物料描述：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>产品图纸：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="10">
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>包装方式：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>品名：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="6">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>生产图纸：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLineEdit" name="ProductName_lineEdit"/>
+        </item>
+        <item row="0" column="5">
+         <widget class="QLineEdit" name="Specs_lineEdit"/>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>规格：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="9">
+         <widget class="QLineEdit" name="CustomerDrawings_lineEdit"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="Drawing_W_lineEdit"/>
+        </item>
+        <item row="0" column="6">
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>温度：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>内部图号：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5">
+         <widget class="QLineEdit" name="ProductDrawings_lineEdit"/>
+        </item>
+        <item row="0" column="7">
+         <widget class="QLineEdit" name="TemperatureLevel_lineEdit"/>
+        </item>
+        <item row="0" column="9">
+         <widget class="QLineEdit" name="Density_lineEdit"/>
+        </item>
+        <item row="1" column="8">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>客户图纸：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>料号：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="7">
+         <widget class="QLineEdit" name="DesignDrawings_lineEdit"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="PartNumber_lineEdit">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="Drawing_N_lineEdit"/>
+        </item>
+        <item row="0" column="12">
+         <widget class="QLabel" name="label_14">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="resetFindButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>重置查询条件</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="findButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>查  询</string>
+        </property>
+        <property name="shortcut">
+         <string>Return</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_15">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <tabstops>
+  <tabstop>PartNumber_lineEdit</tabstop>
+  <tabstop>ProductName_lineEdit</tabstop>
+  <tabstop>Specs_lineEdit</tabstop>
+  <tabstop>TemperatureLevel_lineEdit</tabstop>
+  <tabstop>Density_lineEdit</tabstop>
+  <tabstop>PackagingMethod_lineEdit</tabstop>
+  <tabstop>Drawing_N_lineEdit</tabstop>
+  <tabstop>Drawing_W_lineEdit</tabstop>
+  <tabstop>ProductDrawings_lineEdit</tabstop>
+  <tabstop>DesignDrawings_lineEdit</tabstop>
+  <tabstop>CustomerDrawings_lineEdit</tabstop>
+  <tabstop>Description_lineEdit</tabstop>
+  <tabstop>resetFindButton</tabstop>
+  <tabstop>findButton</tabstop>
+  <tabstop>tableWidget</tabstop>
+  <tabstop>addButton</tabstop>
+  <tabstop>addAllButton</tabstop>
+  <tabstop>modifyButton</tabstop>
+  <tabstop>deleteAllButton</tabstop>
+  <tabstop>deleteButton</tabstop>
+  <tabstop>exportButton</tabstop>
+  <tabstop>exitButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>resetFindButton</sender>
+   <signal>clicked()</signal>
+   <receiver>PartNumber_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1120</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>149</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetFindButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ProductName_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1143</x>
+     <y>10</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>312</x>
+     <y>14</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetFindButton</sender>
+   <signal>clicked()</signal>
+   <receiver>PackagingMethod_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1126</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1012</x>
+     <y>24</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetFindButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Density_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1154</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>857</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetFindButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TemperatureLevel_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1152</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>670</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetFindButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Specs_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1157</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>482</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetFindButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Description_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1160</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1003</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetFindButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CustomerDrawings_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1146</x>
+     <y>22</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>818</x>
+     <y>53</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetFindButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DesignDrawings_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1148</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>681</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetFindButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ProductDrawings_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1142</x>
+     <y>18</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>494</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetFindButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Drawing_W_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1128</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetFindButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Drawing_N_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1113</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>125</x>
+     <y>54</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exitButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DrawingsMainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1132</x>
+     <y>702</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1051</x>
+     <y>719</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
